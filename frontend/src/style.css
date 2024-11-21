@@ -1,0 +1,236 @@
+/* Default background theme (light theme) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --button-bg-color: #007bff;
+  --button-text-color: #ffffff;
+  --header-bg-color: #f8f9fa;
+  --background-image: url('images/default-bg.jpg');
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-color: #2f2f2f;
+  --text-color: #ffffff;
+  --button-bg-color: #4e4e4e;
+  --button-text-color: #ffffff;
+  --header-bg-color: #333333;
+  --background-image: url('images/dark-bg.jpg');
+}
+
+/* Sunset theme */
+[data-theme="sunset"] {
+  --bg-color: #ff8c00;
+  --text-color: #ffffff;
+  --button-bg-color: #4e4e4e;
+  --button-text-color: #ffffff;
+  --header-bg-color: #e65200;
+  --background-image: url('images/sunset-bg.jpg');
+}
+
+/* wallpaper theme */
+[data-theme="wallpaper"] {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --button-bg-color: #007bff;
+  --button-text-color: #ffffff;
+  --header-bg-color: #f8f9fa;
+  --background-image: url('images/wallpaper.jpg');
+}
+
+/* photo theme */
+[data-theme="photo"] {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --button-bg-color: #007bff;
+  --button-text-color: #ffffff;
+  --header-bg-color: #f8f9fa;
+  --background-image: url('images/YourPhoto.jpg');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+   
+}
+
+.sidebarLeft {
+    width: 30%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+.chat-list {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.chat-item1 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.chat-item1:hover {
+  background-color: #ddd;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+  /* Right Site */
+  .chat-windowRight {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .chat-header {
+    padding: 15px;
+    display: flex;
+    background-color: #075e54;
+    color: #fff;
+    align-items: center;
+}
+
+.chat-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+  .messages {
+    flex-grow: 1;
+    display: flex;
+    padding: 10px;
+    overflow-y: auto; 
+    max-height: 800px; 
+    flex-direction: column;
+  }
+
+  .message {
+    margin: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  }
+  
+  .message.sender {
+    align-self: flex-end;
+    text-align: right;
+    background-color: #dcf8c6; 
+    color: #000;
+    border: 1px solid #34b7f1;
+    padding: 10px;
+    border-radius: 15px 15px 0px 15px;
+  }
+  
+  .message.receiver {
+    align-self: flex-start;
+    background-color: #f1f0f0;
+    color: #000;
+    text-align: left;
+  }
+
+  
+  .chat-input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 5px;
+    background-color: #fff;
+    width: 95%;
+  }
+
+   /* মেসেজ ইনপুট */
+   .input-container input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+  }
+  
+  .chat-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .send-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .send-button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Custom notification system style*/
+.Toastify__toast {
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+}
