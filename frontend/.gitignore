@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Backend এর node_modules ফোল্ডার বাদ দিন
+backend/node_modules/
+
+# Frontend এর node_modules ফোল্ডার বাদ দিন
+frontend/node_modules/
+
+
